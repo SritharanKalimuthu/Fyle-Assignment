@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(()=> {
     // Project Content Click Event
-    $('.project-content').on('click', function() {
+    $('.project-content').on('click', ()=> {
         // Remove 'selected' class from all project content
         $('.project-content').removeClass('selected');
         // Add 'selected' class to the clicked project content
@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', ()=> {
     const formGroups = document.querySelectorAll('.formGroup');
 
     formGroups.forEach(formGroup => {
@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const label = formGroup.querySelector('label');
 
         // Add 'filled' class on input focus
-        input.addEventListener('focus', function () {
+        input.addEventListener('focus',  ()=> {
             label.classList.add('filled');
         });
 
         // Toggle 'filled' class based on input value on blur
-        input.addEventListener('blur', function () {
+        input.addEventListener('blur',  ()=> {
             const inputValue = this.value.trim();
             if (inputValue !== '') {
                 label.classList.add('filled');
@@ -36,23 +36,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-$(document).ready(function () {
+$(document).ready( ()=> {
     // Close Form Button Click Event
-    $('#closeFormBtn').on('click', function () {
+    $('#closeFormBtn').on('click',  ()=> {
         $('#contactForm').removeClass('show');
         $('body').removeClass('no-scroll');
         $('main').removeClass('blur');
     });
 
     // Contact Us Button Click Event
-    $('#contactUsBtn').on('click', function () {
+    $('#contactUsBtn').on('click',  function() {
         $('#contactForm').addClass('show');
         $('body').addClass('no-scroll');
         $('main').addClass('blur');
     });
+
+    // Function to clear the form with a delay
+    $('#submitBtn').on('click',  ()=> {
+        setTimeout(() => {
+            $("#getform").trigger("reset");
+        }, 700);
+    });
+
 });
 
-$(document).ready(function () {
+$(document).ready( ()=> {
     const carouselContainer = $('.carousel-container');
     const dots = $('.dot');
     let currentIndex = 0;
@@ -85,15 +93,8 @@ $(document).ready(function () {
     setInterval(nextSlide, 3000);
 
     // Dot Click Event to go to a specific slide
-    dots.on('click', function () {
+    dots.on('click',  ()=> {
         currentIndex = $(this).index();
         goToSlide(currentIndex);
     });
 });
-
-// Function to clear the form with a delay
-function clearForm() {
-    setTimeout(() => {
-        $("#getform").trigger("reset");
-    }, 700);
-}
