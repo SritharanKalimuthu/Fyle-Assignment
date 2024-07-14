@@ -9,7 +9,11 @@
 
 body{
     overflow-x: hidden;
-    transition: all .5s ease;
+}
+
+main{
+    transition: all .6s ease;
+
 }
 
 .project-content{

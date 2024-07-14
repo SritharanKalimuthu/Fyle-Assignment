@@ -56,7 +56,7 @@ $(document).ready(function () {
     items.clone().appendTo(carouselContainer);
 
     function goToSlide(index) {
-        carouselContainer.css('transform', 'translateX(' + (-70 * index) + '%)');
+        carouselContainer.css('transform', 'translateX(' + (-110 * index) + '%)');
         dots.removeClass('red-circle');
         dots.eq(index % totalItems).addClass('red-circle');
     }
