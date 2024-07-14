@@ -6,6 +6,7 @@ This is an assignment project for Fyle, demonstrating a digital marketing applic
 ## Technologies Used
 - HTML
 - CSS
+- Bootstrap
 - JavaScript
 - jQuery
 
