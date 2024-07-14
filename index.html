@@ -11,23 +11,21 @@
 </head>
     <main>
         <!-- Hero Section -->
-        <header>
-            <div class="container col-xxl-8 px-4 py-5">
-                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="Assets/Images/hero.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" loading="lazy">
-                </div>
-                <div class="col-lg-6">
-                    <h4 class="fs-3 fw-medium text-danger mb-3 text-uppercase">Award winning</h4>
-                    <h1 class="fw-semibold text-black lh-sm mb-4 text-uppercase " style="font-size: 2.7rem;">Digital marketing agency</h1>
-                    <p class="lead text-black fw-medium lh-lg mb-4" style="font-size: .9rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, sed consequuntur. Repellendus natus iure eos et repudiandae pariatur odio obcaecati fuga, fugit ullam alias quam.</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" id="contactUsBtn"  class="btn btn-danger rounded-0 px-4 py-2 me-md-2 fw-semibold" style="font-size: .9rem;">Contact Us</button>
-                    </div>
-                </div>
+        <section class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="Assets/Images/hero.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h4 class="fs-3 fw-medium text-danger mb-3 text-uppercase">Award winning</h4>
+                <h1 class="fw-semibold text-black lh-sm mb-4 text-uppercase " style="font-size: 2.7rem;">Digital marketing agency</h1>
+                <p class="lead text-black fw-medium lh-lg mb-4" style="font-size: .9rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, sed consequuntur. Repellendus natus iure eos et repudiandae pariatur odio obcaecati fuga, fugit ullam alias quam.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" id="contactUsBtn"  class="btn btn-danger rounded-0 px-4 py-2 me-md-2 fw-semibold" style="font-size: .9rem;">Contact Us</button>
                 </div>
             </div>
-        </header>
+            </div>
+        </section>
 
         <!-- What We Do Section -->
         <section class="bg-light py-5">
@@ -132,6 +130,7 @@
                             <p class="fw-medium my-1" style="font-size: .9rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, id alias!</p>
                     </div>
                 </div>
+
                 <!--Project section-->
                 <div class="text-center my-5">
                     <span class="fs-3 text-danger fw-medium mb-1 text-uppercase">OUR PROJECT</span>
@@ -160,7 +159,7 @@
         </section>
 
         <!-- Highlight on Hover Section -->
-        <div id="stats" class="bg-light text-dark py-5">
+        <section id="stats" class="bg-light text-dark py-5">
             <div class="container col-xxl-8 px-2 py-5">
                 <div class="heading text-center">
                     <span class="fs-3 text-danger fw-medium mb-1 text-uppercase">expert growth</span>
@@ -197,9 +196,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div id="feedback" class="bg-white text-dark py-5">
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="bg-white text-dark py-5">
             <div class="container col-xxl-8 px-2 py-5">
                 <div class="heading text-center mb-4">
                     <span class="fs-3 text-danger fw-medium mb-1 text-uppercase">client's feedback</span>
@@ -215,9 +215,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div id="footer" class="bg-danger text-white py-5">
+        </section>
+
+
+        <!-- Footer Section -->
+        <section id="footer" class="bg-danger text-white py-5">
             <div class="container py-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
@@ -244,17 +246,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
        
 
-    <!-- Contact Form Container -->
+    <!-- Contact Form section -->
     <section id="contactForm" class="p-5">
         <div class="d-flex justify-content-between mb-4">
             <h5 class="fs-4 fw-semibold">Talk to Us</h5>
             <i class="fa-solid fa-xmark" id="closeFormBtn" style="cursor: pointer;"></i>
         </div>
-        <form action="https://getform.io/f/<your-getform-endpoint>" method="POST">
+        <form action="https://getform.io/f/byvpkmla" method="POST" id="getform">
             <div class="form-group position-relative my-4 formGroup">
                 <label for="workEmail" class="py-2 position-absolute start-0 text-black-50">Work email*</label>
                 <input type="email" class="py-2 fw-semibold" id="workEmail" name="workEmail" required>
@@ -271,9 +273,9 @@
             </div>
             <div class="form-group form-check checkbox-container mt-4">
                 <input type="checkbox" class="form-check-input" id="termsCheckbox" name="termsCheckbox" required>
-                <p class="form-check-label fw-medium" style="font-size: .9rem;">I agree to Fyle's terms and conditions, and provide consent to send me communication.</p>
+                <label class="form-check-label fw-medium" style="font-size: .9rem;">I agree to Fyle's terms and conditions, and provide consent to send me communication.</label>
             </div>
-            <button type="submit" class="w-100 btn btn-danger rounded-0">Contact Us</button>
+            <button type="submit" onclick="clearform()" class="w-100 btn btn-danger rounded-0">Contact Us</button>
         </form>
     </section>
 
