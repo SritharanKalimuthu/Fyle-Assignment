@@ -11,6 +11,6 @@ This is an assignment project for Fyle, demonstrating a digital marketing applic
 - jQuery
 
 ## Live Link
-You can view the live application [here](#).
+You can view the live application [here](https://sritharankalimuthu.github.io/Fyle-Assignment/).
 
 
