@@ -95,5 +95,5 @@ $(document).ready(function () {
 function clearForm() {
     setTimeout(() => {
         $("#getform").trigger("reset");
-    }, 700);
+    }, 300);
 }
